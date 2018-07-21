@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2018. syshlang
+ * @File: Quickstart.java
+ * @Description:
+ * @Author: sunys
+ * @Date: 18-7-21 下午5:09
+ * @since:
+ */
+
 package com.syshlang.shiro.helloworld;
 
 import org.apache.shiro.SecurityUtils;
