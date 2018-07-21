@@ -59,11 +59,11 @@
       <artifactId>shiro-hazelcast</artifactId>
       <version>${shiro.version}</version>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>org.apache.shiro</groupId>
       <artifactId>shiro-features</artifactId>
       <version>${shiro.version}</version>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.apache.shiro</groupId>
       <artifactId>shiro-guice</artifactId>
