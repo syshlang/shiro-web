@@ -3,11 +3,11 @@
  * @File: Quickstart.java
  * @Description:
  * @Author: sunys
- * @Date: 18-7-21 下午5:09
+ * @Date: 18-7-21 下午5:20
  * @since:
  */
 
-package com.syshlang.shiro.helloworld;
+package com.syshlang.shiro;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
