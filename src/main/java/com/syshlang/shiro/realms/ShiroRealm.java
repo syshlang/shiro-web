@@ -77,16 +77,6 @@ public class ShiroRealm extends AuthorizingRealm {
         return info;
     }
 
-    public static void main(String[] args) {
-        String hashAlgorithmName = "MD5";
-        Object credentials = "123456";
-        Object salt = ByteSource.Util.bytes("user");;
-        int hashIterations = 1024;
-
-        Object result = new SimpleHash(hashAlgorithmName, credentials, salt, hashIterations);
-        System.out.println(result);
-    }
-
     //授权会被 shiro 回调的方法
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(
@@ -106,5 +96,15 @@ public class ShiroRealm extends AuthorizingRealm {
 
         //4. 返回 SimpleAuthorizationInfo 对象.
         return info;
+    }
+
+    public static void main(String[] args) {
+        String hashAlgorithmName = "MD5";
+        Object credentials = "123456";
+        Object salt = ByteSource.Util.bytes("user");;
+        int hashIterations = 1024;
+
+        Object result = new SimpleHash(hashAlgorithmName, credentials, salt, hashIterations);
+        System.out.println(result);
     }
 }

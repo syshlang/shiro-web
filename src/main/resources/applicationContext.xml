@@ -22,15 +22,13 @@
     -->
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
         <property name="cacheManager" ref="cacheManager"/>
-        <property name="authenticator" ref="authenticator"></property>
-
+        <property name="authenticator" ref="authenticator"/>
         <property name="realms">
             <list>
                 <ref bean="jdbcRealm"/>
                 <ref bean="secondRealm"/>
             </list>
         </property>
-
         <property name="rememberMeManager.cookie.maxAge" value="10"></property>
     </bean>
 
@@ -41,13 +39,13 @@
     2.1 需要加入 ehcache 的 jar 包及配置文件. 
     -->
     <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
-        <!-- Set a net.sf.ehcache.CacheManager instance here if you already have one.  If not, a new one
-             will be creaed with a default config:
-             <property name="cacheManager" ref="ehCacheManager"/> -->
-        <!-- If you don't have a pre-built net.sf.ehcache.CacheManager instance to inject, but you want
-             a specific Ehcache configuration to be used, specify that here.  If you don't, a default
-             will be used.: -->
-        <property name="cacheManagerConfigFile" value="classpath:ehcache.xml"/>
+    <!-- Set a net.sf.ehcache.CacheManager instance here if you already have one.  If not, a new one
+         will be creaed with a default config:
+         <property name="cacheManager" ref="ehCacheManager"/> -->
+    <!-- If you don't have a pre-built net.sf.ehcache.CacheManager instance to inject, but you want
+         a specific Ehcache configuration to be used, specify that here.  If you don't, a default
+         will be used.: -->
+    <property name="cacheManagerConfigFile" value="classpath:ehcache.xml"/>
     </bean>
 
     <bean id="authenticator"
