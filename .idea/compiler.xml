@@ -9,5 +9,8 @@
         <module name="shiro-web" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="shiro-web" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
