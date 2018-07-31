@@ -9,7 +9,7 @@
 
 
 
-package com.syshlang.shiro;
+package com.syshlang.framework.shiro;
 
 import org.junit.Test;
 
