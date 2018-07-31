@@ -7,7 +7,7 @@
  * @since:
  */
 
-package com.syshlang.shiro.realms;
+package com.syshlang.demo.realms;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;

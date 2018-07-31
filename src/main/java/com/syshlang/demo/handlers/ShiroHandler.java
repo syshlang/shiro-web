@@ -1,8 +1,8 @@
-package com.syshlang.shiro.handlers;
+package com.syshlang.demo.handlers;
 
 import javax.servlet.http.HttpSession;
 
-import com.syshlang.shiro.services.ShiroService;
+import com.syshlang.demo.services.ShiroService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;

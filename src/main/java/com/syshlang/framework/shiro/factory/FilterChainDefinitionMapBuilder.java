@@ -7,7 +7,7 @@
  * @since:
  */
 
-package com.syshlang.shiro.factory;
+package com.syshlang.framework.shiro.factory;
 
 import java.util.LinkedHashMap;
 
@@ -20,10 +20,10 @@ public class FilterChainDefinitionMapBuilder {
         map.put("/login.jsp", "anon");
         map.put("/shiro/login", "anon");
         map.put("/shiro/logout", "logout");
-        map.put("/user.jsp", "authc,roles[user]");
-        map.put("/admin.jsp", "authc,roles[admin]");
+        map.put("/user.jsp", "sessionForceLogout,authc,roles[user]");
+        map.put("/admin.jsp", "sessionForceLogout,authc,roles[admin]");
         map.put("/list.jsp", "user");
-        map.put("/**", "authc");
+        map.put("/**", "sessionForceLogout,authc");
         return map;
     }
 }

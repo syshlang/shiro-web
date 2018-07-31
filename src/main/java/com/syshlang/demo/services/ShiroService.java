@@ -7,7 +7,7 @@
  * @since:
  */
 
-package com.syshlang.shiro.services;
+package com.syshlang.demo.services;
 
 import java.util.Date;
 

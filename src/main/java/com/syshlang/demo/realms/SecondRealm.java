@@ -7,7 +7,7 @@
  * @since:
  */
 
-package com.syshlang.shiro.realms;
+package com.syshlang.demo.realms;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.crypto.hash.SimpleHash;
