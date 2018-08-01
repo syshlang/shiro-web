@@ -28,16 +28,40 @@ public class MyAuthenticationFilter extends AuthenticationFilter {
         super();
     }
 
+    /**
+     * 表示是否允许访问；
+     * @param request
+     * @param response
+     * @param mappedValue mappedValue就是[urls]配置中拦截器参数部分
+     * @return 如果允许访问返回true，否则false；
+     */
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
         return super.isAccessAllowed(request, response, mappedValue);
     }
 
+    /**
+     * 表示当访问拒绝时是否已经处理了；
+     * @param request
+     * @param response
+     * @param mappedValue
+     * @return  如果返回true表示需要继续处理；
+     *          如果返回false表示该拦截器实例已经处理了，将直接返回即可。
+     * @throws Exception
+     */
     @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception {
         return super.onAccessDenied(request, response, mappedValue);
     }
 
+    /**
+     * 表示当访问拒绝时是否已经处理了；
+     * @param servletResponse
+     * @param servletRequest
+     * @return  如果返回true表示需要继续处理；
+     *          如果返回false表示该拦截器实例已经处理了，将直接返回即可。
+     * @throws Exception
+     */
     @Override
     protected boolean onAccessDenied(ServletRequest servletRequest, ServletResponse servletResponse) throws Exception {
         return false;

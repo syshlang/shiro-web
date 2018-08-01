@@ -38,7 +38,9 @@
     <bean id="authenticationFilter" class="com.syshlang.framework.shiro.filter.MyAuthenticationFilter"/>
 
     <!-- 强制退出会话过滤器 -->
-    <bean id="sessionForceLogout" class="com.syshlang.framework.shiro.filter.SessionForceLogoutFilter"/>
+    <bean id="sessionForceLogout" class="com.syshlang.framework.shiro.filter.SessionForceLogoutFilter">
+        <property name="loginUrl" value="${syshlang.loginUrl}"/>
+    </bean>
 
     <!-- 配置一个 bean, 该 bean 实际上是一个 Map. 通过实例工厂方法的方式 -->
     <bean id="filterChainDefinitionMap"
